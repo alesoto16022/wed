@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas de Libros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Barra de navegación */
+        nav {
+            background-color: #222;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para el contenido principal */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5em;
+            color: #003366;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 10px;
+        }
+
+        /* Reseñas de libros */
+        .book-review {
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .book-review:hover {
+            transform: scale(1.02);
+        }
+
+        .book-info {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .book-image {
+            max-width: 150px;
+            max-height: 225px;
+            border-radius: 8px;
+        }
+
+        .book-title {
+            font-size: 2em;
+            font-weight: 600;
+            color: #003366;
+        }
+
+        .author, .publication-date {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .rating {
+            font-size: 1.2em;
+            color: #FFD700;
+        }
+
+        .review-text {
+            margin-top: 20px;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        /* Sección de formulario */
+        .review-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .review-form input, .review-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .review-form button {
+            background-color: #003366;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        .review-form button:hover {
+            background-color: #00529B;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: #00BFFF;
+            text-decoration: none;
+        }
+
+        /* Medios (Responsive Design) */
+        @media (max-width: 768px) {
+            .book-review {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .book-info {
+                margin-left: 0;
+            }
+
+            .book-image {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Reseñas de Libros</h1>
+        <p>Encuentra recomendaciones, opiniones y reseñas sobre libros de diferentes géneros literarios.</p>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="#home">Inicio</a>
+        <a href="#reviews">Reseñas</a>
+        <a href="#submit">Enviar Reseña</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main>
+        
+        <!-- Sección Inicio -->
+        <section id="home">
+            <h2>Bienvenido a nuestra plataforma</h2>
+            <p>Este sitio está diseñado para los amantes de la lectura. Encuentra reseñas, recomendaciones y descubre nuevos libros según tus intereses literarios. ¡Aquí puedes compartir tu opinión sobre tus libros favoritos!</p>
+        </section>
+
+        <!-- Sección Reseñas de Libros -->
+        <section id="reviews">
+            <h2>Reseñas Recientes</h2>
+
+            <!-- Reseña de Libro 1 -->
+            <div class="book-review">
+                <img src="https://via.placeholder.com/150x225" alt="Portada de El Nombre del Viento" class="book-image">
+                <div class="book-info">
+                    <h3 class="book-title">El Nombre del Viento</h3>
+                    <p class="author">Autor: Patrick Rothfuss</p>
+                    <p class="publication-date">Publicado: 2007</p>
+                    <p class="rating">★★★★☆</p>
+                    <p class="review-text">El Nombre del Viento es la primera entrega de la trilogía *Crónica del Asesino de Reyes*. Es un relato lleno de magia, música y aventura, protagonizado por Kvothe, un joven prodigio que se convierte en una leyenda. La narrativa profunda y la construcción del mundo hacen de este libro una obra maestra de la fantasía moderna.</p>
+                    <p>Fuente: <a href="https://www.goodreads.com/book/show/186074.The_Name_of_the_Wind" target="_blank">Goodreads</a></p>
+                </div>
+            </div>
+
+            <!-- Reseña de Libro 2 -->
+            <div class="book-review">
+                <img src="https://via.placeholder.com/150x225" alt="Portada de 1984" class="book-image">
+                <div class="book-info">
+                    <h3 class="book-title">1984</h3>
+                    <p class="author">Autor: George Orwell</p>
+                    <p class="publication-date">Publicado: 1949</p>
+                    <p class="rating">★★★★★</p>
+                    <p class="review-text">*1984* es una distopía que explora temas de vigilancia, totalitarismo y libertad individual. La novela está ambientada en un mundo donde el gobierno controla cada aspecto de la vida de sus ciudadanos, y la realidad es manipulada por una figura omnipresente: el Gran Hermano. Esta obra se considera un pilar fundamental de la literatura del siglo XX.</p>
+                    <p>Fuente: <a href="https://www.goodreads.com/book/show/5470.1984" target="_blank">Goodreads</a></p>
+                </div>
+            </div>
+
+            <!-- Puedes agregar más reseñas aquí -->
+
+        </section>
+
+        <!-- Formulario para enviar reseñas -->
+        <section id="submit">
+            <h2>Envía tu reseña</h2>
+            <div class="review-form">
+                <form action="#" method="post">
+                    <label for="book-title">Título del Libro</label>
+                    <input type="text" id="book-title" name="book-title" required>
+
+                    <label for="author">Autor</label>
+                    <input type="text" id="author" name="author" required>
+
+                    <label for="rating">Calificación (de 1 a 5)</label>
+                    <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+                    <label for="review-text">Tu Reseña</label>
+                    <textarea id="review-text" name="review-text" rows="5" required></textarea>
+
+                    <button type="submit">Enviar Reseña</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer id="contact">
+        <p>&copy; 2024 Reseñas de Libros | Todos los derechos reservados</p>
+        <p>Contáctanos en: <a href="mailto:contacto@reseñalibros.com">contacto@reseñalibros.com</a></p>
+    </footer>
+
+</body>
+</html>
